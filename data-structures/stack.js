@@ -31,3 +31,12 @@ Stack.prototype.peek = function() {
 Stack.prototype.size = function() {
   return this.count;
 };
+
+Stack.prototype.contains = function(value) {
+  for (var i in this.storage) {
+    if (this.storage[i] === value) {
+      return true;
+    }
+  }
+  return false;
+};
