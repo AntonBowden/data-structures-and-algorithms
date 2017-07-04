@@ -40,3 +40,12 @@ Stack.prototype.contains = function(value) {
   }
   return false;
 };
+
+Stack.prototype.until = function(value) {
+  for (var i in this.storage) {
+    if (this.storage[i] === value) {
+      console.log("Count: " + this.count, "i: " + i);
+      return this.count - i;
+    }
+  }
+};
