@@ -38,5 +38,13 @@ Queue.prototype.contains = function(value) {
       return true;
     }
   }
-  return false;  
+  return false;
 }
+
+Queue.prototype.until = function(value) {
+  for (var i in this.storage) {
+    if (this.storage[i] === value) {      
+      return this.count() - i;
+    }
+  }
+};
